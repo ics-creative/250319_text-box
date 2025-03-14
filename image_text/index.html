@@ -11,16 +11,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
 
-   <!-- 共通レイアウト用CSS -->
+  <!-- 共通レイアウト用CSS -->
   <link rel="stylesheet" href="../layout.css">
 
   <!-- 画面個別スタイル -->
   <style>
     .box {
-      width: 600px;
-      height: 150px;
+      max-width: 600px;
       display: grid;
-      grid-template-columns: 200px auto;
+      grid-template-columns: 1fr 2fr;
       gap: 20px;
       font-family: "Noto Sans JP", sans-serif;
       line-height: 1.75;
@@ -29,6 +28,14 @@
     .image-box {
       background-color: pink;
       border-radius: 8px;
+      height: 150px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+      }
     }
 
     .info {
@@ -53,49 +60,57 @@
 </head>
 
 <body>
-  <h1 class="title">画像とテキストの組み合わせ デザイン例</h1>
+  <h1 class="title">画像とテキストの組み合わせ</h1>
   <div class="container">
     <div class="box">
-      <div class="image-box"></div>
+      <div class="image-box">
+        <img src="./images/image_jellyfish.jpg" alt="">
+      </div>
       <div class="info">
-        <h2 class="title-sub1">①見出しテキストが入ります</h2>
-        <p class="description">
-          text-boxプロパティは未指定です。<br>
-          font-familyプロパティは"Noto Sans JP", sans-serifを指定しています。
-        </p>
+        <h2 class="title-sub1">① 見出しテキストが入ります</h2>
+        <ul class="description">
+          <li><em class="em">text-box: none;（未指定）</em></li>
+          <li>font-family: "Noto Sans JP", sans-serif;</li>
+        </ul>
       </div>
     </div>
 
     <div class="box">
-      <div class="image-box"></div>
+      <div class="image-box">
+        <img src="./images/image_jellyfish.jpg" alt="">
+      </div>
       <div class="info">
-        <h2 class="title-sub2 is-trim1">②見出しテキストが入ります</h2>
-        <p class="description">
-          trim-both text;を指定しています。<br>
-          font-familyプロパティは"Noto Sans JP", sans-serifを指定しています。
-        </p>
+        <h2 class="title-sub2 is-trim1">② 見出しテキストが入ります</h2>
+        <ul class="description">
+          <li><em class="em">text-box: trim-both text;</em></li>
+          <li>font-family: "Noto Sans JP", sans-serif;</li>
+        </ul>
       </div>
     </div>
 
     <div class="box">
-      <div class="image-box"></div>
+      <div class="image-box">
+        <img src="./images/image_jellyfish.jpg" alt="">
+      </div>
       <div class="info">
-        <h2 class="title-sub2 is-trim2">③見出しテキストが入ります</h2>
-        <p class="description">
-          trim-both cap alphabetic;を指定しています。<br>
-          font-familyプロパティは"Noto Sans JP", sans-serifを指定しています。
-        </p>
+        <h2 class="title-sub2 is-trim2">③ 見出しテキストが入ります</h2>
+        <ul class="description">
+          <li><em class="em">text-box: trim-both cap alphabetic;</em></li>
+          <li>font-family: "Noto Sans JP", sans-serif;</li>
+        </ul>
       </div>
     </div>
 
     <div class="box">
-      <div class="image-box"></div>
+      <div class="image-box">
+        <img src="./images/image_jellyfish.jpg" alt="">
+      </div>
       <div class="info">
-        <h2 class="title-sub2 is-trim3">④見出しテキストが入ります</h2>
-        <p class="description">
-          trim-both text;を指定しています。<br>
-          font-familyプロパティは"sans-serifを指定しています。
-        </p>
+        <h2 class="title-sub2 is-trim3">④ 見出しテキストが入ります</h2>
+        <ul class="description">
+          <li>text-box: trim-both text;</li>
+          <li><em class="em">font-family: sans-serif;</em></li>
+        </ul>
       </div>
     </div>
   </div>

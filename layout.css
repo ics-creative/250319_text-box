@@ -8,8 +8,7 @@ html {
 body {
   display: grid;
   place-content: center;
-  height: 100%;
-  margin: 0;
+  padding: 80px 20px;
   font-family: sans-serif;
 }
 
@@ -24,6 +23,10 @@ ul {
   margin: 0;
 }
 
+em {
+  font-style: initial;
+}
+
 .container {
   display: grid;
   row-gap: 40px;
@@ -33,6 +36,18 @@ h1, h2 {
   margin: 0;
 }
 
+.em {
+  display: inline-block;
+  padding: 8px;
+  background-color: #caebff;
+  border-radius: 4px;
+  text-box: trim-both cap alphabetic;
+}
+
 .title {
   margin-bottom: 60px;
+}
+
+.title-sub {
+  margin-bottom: 16px;
 }

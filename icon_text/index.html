@@ -4,24 +4,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>画像とテキストの組み合わせ</title>
+  <title>アイコンとテキストの組み合わせ</title>
 
   <!-- Google Fontsの読み込み -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
 
-   <!-- 共通レイアウト用CSS -->
+  <!-- 共通レイアウト用CSS -->
   <link rel="stylesheet" href="../layout.css">
 
   <!-- 画面個別スタイル -->
   <style>
+    .label-list {
+      display: grid;
+      row-gap: 15px;
+    }
+    .label-list2 {
+      display: grid;
+      row-gap: 25px;
+    }
     .item {
       position: relative;
       display: flex;
       gap: 12px;
       align-items: center;
     }
+
     .line {
       position: absolute;
       top: 50%;
@@ -30,20 +39,26 @@
       height: 1px;
       background-color: red;
     }
+
     .icon {
-      width: 30px;
-      height: 30px;
-      background-color: pink;
+      width: 50px;
+      height: 50px;
       border-radius: 50%;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
     }
+
     .text {
-      font-size: 40px;
+      font-size: 32px;
       font-family: "Noto Sans JP", sans-serif;
       line-height: 2;
     }
 
     .text2 {
-      font-size: 40px;
+      font-size: 32px;
       font-family: "Noto Sans JP", sans-serif;
       text-box: trim-both cap alphabetic;
       line-height: 2;
@@ -52,30 +67,56 @@
 </head>
 
 <body>
-  <h1 class="title">アイコンとテキストの組み合わせ デザイン例</h1>
+  <h1 class="title">アイコンとテキストの組み合わせ</h1>
   <div class="container">
-    <h2>①text-boxプロパティ 未指定</h2>
-    <div class="item">
-      <div class="icon"></div>
-      <p class="text">ラベルテキスト</p>
+    <!-- text-box未指定の場合 -->
+    <div>
+      <h2 class="title-sub">① text-box: none（未指定の場合）</h2>
+      <ul class="label-list">
+        <li class="item">
+          <div class="icon">
+            <img src="./images/icon_add.svg" alt="">
+          </div>
+          <p class="text">追加する</p>
+        </li>
+        <li class="item">
+          <div class="icon">
+            <img src="./images/icon_mail.svg" alt="">
+          </div>
+          <p class="text">お問い合わせ</p>
+        </li>
+        <li class="item">
+          <div class="icon">
+            <img src="./images/icon_favorite.svg" alt="">
+          </div>
+          <p class="text">お気に入り</p>
+        </li>
+      </ul>
     </div>
 
-    <div class="item">
-      <div class="icon"></div>
-      <p class="text">ラベルテキスト</p>
-      <span class="line"></span>
-    </div>
-
-    <h2>②text-box: trim-both cap alphabetic</h2>
-    <div class="item">
-      <div class="icon"></div>
-      <p class="text2">ラベルテキスト</p>
-    </div>
-
-    <div class="item">
-      <div class="icon"></div>
-      <p class="text2">ラベルテキスト</p>
-      <span class="line"></span>
+    <!-- text-boxを指定した場合 -->
+    <div>
+      <h2 class="title-sub">② text-box: trim-both cap alphabetic</h2>
+      <ul class="label-list2">
+        <li class="item">
+          <div class="icon">
+            <img src="./images/icon_add.svg" alt="">
+          </div>
+          <p class="text2">追加する</p>
+        </li>
+        <li class="item">
+          <div class="icon">
+            <img src="./images/icon_mail.svg" alt="">
+          </div>
+          <p class="text2">お問い合わせ</p>
+        </li>
+        <li class="item">
+          <div class="icon">
+            <img src="./images/icon_favorite.svg" alt="">
+          </div>
+          <p class="text2">お気に入り</p>
+        </li>
+      </ul>
     </div>
   </div>
 </body>
