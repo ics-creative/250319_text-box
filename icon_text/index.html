@@ -20,10 +20,12 @@
       display: grid;
       row-gap: 15px;
     }
+
     .label-list2 {
       display: grid;
       row-gap: 25px;
     }
+
     .item {
       position: relative;
       display: flex;
@@ -53,15 +55,25 @@
 
     .text {
       font-size: 32px;
-      font-family: "Noto Sans JP", sans-serif;
       line-height: 2;
     }
 
     .text2 {
       font-size: 32px;
-      font-family: "Noto Sans JP", sans-serif;
       text-box: trim-both cap alphabetic;
       line-height: 2;
+    }
+
+    .font-noto-sans-jp {
+      font-family: "Noto Sans JP", sans-serif;
+    }
+
+    .font-biz-udp-gothic {
+      font-family: "BIZ UDPGothic", sans-serif;
+    }
+
+    .font-zen-old-mincho {
+      font-family: "Zen Old Mincho", serif;
     }
   </style>
 </head>
@@ -70,7 +82,7 @@
   <h1 class="title">アイコンとテキストの組み合わせ</h1>
   <div class="container">
     <!-- text-box未指定の場合 -->
-    <div>
+    <div class="font-noto-sans-jp">
       <h2 class="title-sub">① text-box: none（未指定の場合）</h2>
       <ul class="label-list">
         <li class="item">
@@ -95,8 +107,58 @@
     </div>
 
     <!-- text-boxを指定した場合 -->
-    <div>
+    <div class="font-noto-sans-jp">
       <h2 class="title-sub">② text-box: trim-both cap alphabetic</h2>
+      <ul class="label-list2">
+        <li class="item">
+          <div class="icon">
+            <img src="./images/icon_add.svg" alt="">
+          </div>
+          <p class="text2">追加する</p>
+        </li>
+        <li class="item">
+          <div class="icon">
+            <img src="./images/icon_mail.svg" alt="">
+          </div>
+          <p class="text2">お問い合わせ</p>
+        </li>
+        <li class="item">
+          <div class="icon">
+            <img src="./images/icon_favorite.svg" alt="">
+          </div>
+          <p class="text2">お気に入り</p>
+        </li>
+      </ul>
+    </div>
+
+    <!-- フォント BIZ UDPGothic -->
+    <div class="font-biz-udp-gothic">
+      <h2 class="title-sub">③ BIZ UDPGothicの場合（CSS設定は②と同様）</h2>
+      <ul class="label-list2">
+        <li class="item">
+          <div class="icon">
+            <img src="./images/icon_add.svg" alt="">
+          </div>
+          <p class="text2">追加する</p>
+        </li>
+        <li class="item">
+          <div class="icon">
+            <img src="./images/icon_mail.svg" alt="">
+          </div>
+          <p class="text2">お問い合わせ</p>
+        </li>
+        <li class="item">
+          <div class="icon">
+            <img src="./images/icon_favorite.svg" alt="">
+          </div>
+          <p class="text2">お気に入り</p>
+        </li>
+      </ul>
+    </div>
+
+    <!-- フォント Zen Old Mincho -->
+    <div class="font-zen-old-mincho">
+      <h2 class="title-sub">④ Zen Old Minchoの場合（CSS設定は②と同様）</h2>
       <ul class="label-list2">
         <li class="item">
           <div class="icon">

@@ -29,7 +29,7 @@ em {
 
 .container {
   display: grid;
-  row-gap: 40px;
+  row-gap: 60px;
 }
 
 h1, h2 {
