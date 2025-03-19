@@ -39,7 +39,6 @@
       padding: 0 24px;
       border-radius: 100vh;
       line-height: 1.75;
-      text-box: trim-both text;
     }
 
     .label3 {
@@ -49,7 +48,6 @@
       padding: 0 24px;
       border-radius: 100vh;
       line-height: 1.75;
-      text-box: trim-both cap alphabetic;
     }
 
     .label4 {
@@ -59,86 +57,294 @@
       padding: 16px 24px;
       border-radius: 100vh;
       line-height: 1.75;
+    }
+
+    .add-padding {
+      padding: 16px 24px;
+    }
+
+    .trim-both-text {
+      text-box: trim-both text;
+    }
+
+    .trim-both-cap-alphabetic {
       text-box: trim-both cap alphabetic;
-    }
-
-    .font-noto-sans-jp {
-      font-family: "Noto Sans JP", sans-serif;
-    }
-
-    .font-biz-udp-gothic {
-      font-family: "BIZ UDPGothic", sans-serif;
-    }
-
-    .font-zen-old-mincho {
-      font-family: "Zen Old Mincho", serif;
     }
   </style>
 </head>
 
 <body>
-  <h1 class="title">文言の背景に角丸矩形を配置したデザイン</h1>
-  <div class="container">
-    <div class="font-noto-sans-jp">
-      <h2 class="title-sub">① text-box: none（未指定の場合）</h2>
-      <ul class="label-list">
-        <li class="label">りんご</li>
-        <li class="label">お問い合わせ</li>
-        <li class="label">login</li>
-        <li class="label">Serviceについて</li>
-      </ul>
-    </div>
+  <section class="ly-container">
+    <h1>文言の背景に角丸矩形を配置したデザイン</h1>
 
-    <div class="font-noto-sans-jp">
-      <h2 class="title-sub">② text-box: trim-both text</h2>
-      <ul class="label-list">
-        <li class="label2">りんご</li>
-        <li class="label2">お問い合わせ</li>
-        <li class="label2">login</li>
-        <li class="label2">Serviceについて</li>
-      </ul>
-    </div>
+    <!-- Noto Sans Japanese -->
+    <section>
+      <h2>使用フォント：Noto Sans Japanese</h2>
+      <section class="ly-container-small">
+        <div class="font-noto-sans-jp">
+          <h3 class="title-sub">① text-box: none（未指定の場合）</h3>
+          <ul class="label-list">
+            <li class="label">りんご</li>
+            <li class="label">お問い合わせ</li>
+            <li class="label">login</li>
+            <li class="label">Serviceについて</li>
+          </ul>
+        </div>
 
-    <div class="font-noto-sans-jp">
-      <h2 class="title-sub">③ text-box: trim-both cap alphabetic</h2>
-      <ul class="label-list">
-        <li class="label3">りんご</li>
-        <li class="label3">お問い合わせ</li>
-        <li class="label3">login</li>
-        <li class="label3">Serviceについて</li>
-      </ul>
-    </div>
+        <div class="font-noto-sans-jp">
+          <h3 class="title-sub">② text-box: trim-both text</h3>
+          <ul class="label-list trim-both-text">
+            <li class="label trim-both-text">りんご</li>
+            <li class="label trim-both-text">お問い合わせ</li>
+            <li class="label trim-both-text">login</li>
+            <li class="label trim-both-text">Serviceについて</li>
+          </ul>
+        </div>
 
-    <div class="font-noto-sans-jp">
-      <h2 class="title-sub">④ text-box: trim-both cap alphabetic、上下均等にpaddingを追加</h2>
-      <ul class="label-list">
-        <li class="label4">りんご</li>
-        <li class="label4">お問い合わせ</li>
-        <li class="label4">login</li>
-        <li class="label4">Serviceについて</li>
-      </ul>
-    </div>
+        <div class="font-noto-sans-jp">
+          <h3 class="title-sub">③ text-box: trim-both cap alphabetic</h3>
+          <ul class="label-list">
+            <li class="label trim-both-cap-alphabetic">りんご</li>
+            <li class="label trim-both-cap-alphabetic">お問い合わせ</li>
+            <li class="label trim-both-cap-alphabetic">login</li>
+            <li class="label trim-both-cap-alphabetic">Serviceについて</li>
+          </ul>
+        </div>
 
-    <div class="font-biz-udp-gothic">
-      <h2 class="title-sub">⑤ BIZ UDPGothicの場合（CSS設定は④と同様）</h2>
-      <ul class="label-list">
-        <li class="label4">りんご</li>
-        <li class="label4">お問い合わせ</li>
-        <li class="label4">login</li>
-        <li class="label4">Serviceについて</li>
-      </ul>
-    </div>
+        <div class="font-noto-sans-jp">
+          <h3 class="title-sub">④ text-box: trim-both cap alphabetic、上下均等にpaddingを追加</h3>
+          <ul class="label-list">
+            <li class="label trim-both-cap-alphabetic add-padding">りんご</li>
+            <li class="label trim-both-cap-alphabetic add-padding">お問い合わせ</li>
+            <li class="label trim-both-cap-alphabetic add-padding">login</li>
+            <li class="label trim-both-cap-alphabetic add-padding">Serviceについて</li>
+          </ul>
+        </div>
+      </section>
+    </section>
 
-    <div class="font-zen-old-mincho">
-      <h2 class="title-sub">⑥ Zen Old Minchoの場合（CSS設定は④と同様）</h2>
-      <ul class="label-list">
-        <li class="label4">りんご</li>
-        <li class="label4">お問い合わせ</li>
-        <li class="label4">login</li>
-        <li class="label4">Serviceについて</li>
-      </ul>
-    </div>
-  </div>
+    <!-- BIZ UDPGothic -->
+    <section>
+      <h2>使用フォント：BIZ UDPGothic</h2>
+      <div class="font-biz-udp-gothic">
+        <h3 class="title-sub">① text-box: none（未指定の場合）</h3>
+        <ul class="label-list">
+          <li class="label">りんご</li>
+          <li class="label">お問い合わせ</li>
+          <li class="label">login</li>
+          <li class="label">Serviceについて</li>
+        </ul>
+      </div>
+
+      <div class="font-biz-udp-gothic">
+        <h3 class="title-sub">② text-box: trim-both text</h3>
+        <ul class="label-list trim-both-text">
+          <li class="label trim-both-text">りんご</li>
+          <li class="label trim-both-text">お問い合わせ</li>
+          <li class="label trim-both-text">login</li>
+          <li class="label trim-both-text">Serviceについて</li>
+        </ul>
+      </div>
+
+      <div class="font-biz-udp-gothic">
+        <h3 class="title-sub">③ text-box: trim-both cap alphabetic</h3>
+        <ul class="label-list">
+          <li class="label trim-both-cap-alphabetic">りんご</li>
+          <li class="label trim-both-cap-alphabetic">お問い合わせ</li>
+          <li class="label trim-both-cap-alphabetic">login</li>
+          <li class="label trim-both-cap-alphabetic">Serviceについて</li>
+        </ul>
+      </div>
+
+      <div class="font-biz-udp-gothic">
+        <h3 class="title-sub">④ text-box: trim-both cap alphabetic、上下均等にpaddingを追加</h3>
+        <ul class="label-list">
+          <li class="label trim-both-cap-alphabetic add-padding">りんご</li>
+          <li class="label trim-both-cap-alphabetic add-padding">お問い合わせ</li>
+          <li class="label trim-both-cap-alphabetic add-padding">login</li>
+          <li class="label trim-both-cap-alphabetic add-padding">Serviceについて</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Zen Old Mincho -->
+    <section>
+      <h2>使用フォント：Zen Old Mincho</h2>
+      <div class="font-zen-old-mincho">
+        <h3 class="title-sub">① text-box: none（未指定の場合）</h3>
+        <ul class="label-list">
+          <li class="label4">りんご</li>
+          <li class="label4">お問い合わせ</li>
+          <li class="label4">login</li>
+          <li class="label4">Serviceについて</li>
+        </ul>
+      </div>
+
+      <div class="font-zen-old-mincho">
+        <h3 class="title-sub">② text-box: trim-both text</h3>
+        <ul class="label-list trim-both-text">
+          <li class="label trim-both-text">りんご</li>
+          <li class="label trim-both-text">お問い合わせ</li>
+          <li class="label trim-both-text">login</li>
+          <li class="label trim-both-text">Serviceについて</li>
+        </ul>
+      </div>
+
+      <div class="font-zen-old-mincho">
+        <h3 class="title-sub">③ text-box: trim-both cap alphabetic</h3>
+        <ul class="label-list">
+          <li class="label trim-both-cap-alphabetic">りんご</li>
+          <li class="label trim-both-cap-alphabetic">お問い合わせ</li>
+          <li class="label trim-both-cap-alphabetic">login</li>
+          <li class="label trim-both-cap-alphabetic">Serviceについて</li>
+        </ul>
+      </div>
+
+      <div class="font-zen-old-mincho">
+        <h3 class="title-sub">④ text-box: trim-both cap alphabetic、上下均等にpaddingを追加</h3>
+        <ul class="label-list">
+          <li class="label trim-both-cap-alphabetic add-padding">りんご</li>
+          <li class="label trim-both-cap-alphabetic add-padding">お問い合わせ</li>
+          <li class="label trim-both-cap-alphabetic add-padding">login</li>
+          <li class="label trim-both-cap-alphabetic add-padding">Serviceについて</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 游ゴシック -->
+    <section>
+      <h2>使用フォント：游ゴシック</h2>
+      <div class="font-yu-gothic">
+        <h3 class="title-sub">① text-box: none（未指定の場合）</h3>
+        <ul class="label-list">
+          <li class="label4">りんご</li>
+          <li class="label4">お問い合わせ</li>
+          <li class="label4">login</li>
+          <li class="label4">Serviceについて</li>
+        </ul>
+      </div>
+
+      <div class="font-yu-gothic">
+        <h3 class="title-sub">② text-box: trim-both text</h3>
+        <ul class="label-list trim-both-text">
+          <li class="label trim-both-text">りんご</li>
+          <li class="label trim-both-text">お問い合わせ</li>
+          <li class="label trim-both-text">login</li>
+          <li class="label trim-both-text">Serviceについて</li>
+        </ul>
+      </div>
+
+      <div class="font-yu-gothic">
+        <h3 class="title-sub">③ text-box: trim-both cap alphabetic</h3>
+        <ul class="label-list">
+          <li class="label trim-both-cap-alphabetic">りんご</li>
+          <li class="label trim-both-cap-alphabetic">お問い合わせ</li>
+          <li class="label trim-both-cap-alphabetic">login</li>
+          <li class="label trim-both-cap-alphabetic">Serviceについて</li>
+        </ul>
+      </div>
+
+      <div class="font-yu-gothic">
+        <h3 class="title-sub">④ text-box: trim-both cap alphabetic、上下均等にpaddingを追加</h3>
+        <ul class="label-list">
+          <li class="label trim-both-cap-alphabetic add-padding">りんご</li>
+          <li class="label trim-both-cap-alphabetic add-padding">お問い合わせ</li>
+          <li class="label trim-both-cap-alphabetic add-padding">login</li>
+          <li class="label trim-both-cap-alphabetic add-padding">Serviceについて</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ヒラギノ角ゴシック -->
+    <section>
+      <h2>使用フォント：ヒラギノ角ゴシック</h2>
+      <p class="note">※macOSで閲覧ください。</p>
+      <div class="font-sans-serif">
+        <h3 class="title-sub">① text-box: none（未指定の場合）</h3>
+        <ul class="label-list">
+          <li class="label4">りんご</li>
+          <li class="label4">お問い合わせ</li>
+          <li class="label4">login</li>
+          <li class="label4">Serviceについて</li>
+        </ul>
+      </div>
+
+      <div class="font-sans-serif">
+        <h3 class="title-sub">② text-box: trim-both text</h3>
+        <ul class="label-list trim-both-text">
+          <li class="label trim-both-text">りんご</li>
+          <li class="label trim-both-text">お問い合わせ</li>
+          <li class="label trim-both-text">login</li>
+          <li class="label trim-both-text">Serviceについて</li>
+        </ul>
+      </div>
+
+      <div class="font-sans-serif">
+        <h3 class="title-sub">③ text-box: trim-both cap alphabetic</h3>
+        <ul class="label-list">
+          <li class="label trim-both-cap-alphabetic">りんご</li>
+          <li class="label trim-both-cap-alphabetic">お問い合わせ</li>
+          <li class="label trim-both-cap-alphabetic">login</li>
+          <li class="label trim-both-cap-alphabetic">Serviceについて</li>
+        </ul>
+      </div>
+
+      <div class="font-sans-serif">
+        <h3 class="title-sub">④ text-box: trim-both cap alphabetic、上下均等にpaddingを追加</h3>
+        <ul class="label-list">
+          <li class="label trim-both-cap-alphabetic add-padding">りんご</li>
+          <li class="label trim-both-cap-alphabetic add-padding">お問い合わせ</li>
+          <li class="label trim-both-cap-alphabetic add-padding">login</li>
+          <li class="label trim-both-cap-alphabetic add-padding">Serviceについて</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- メイリオ -->
+    <section>
+      <h2>使用フォント：メイリオ</h2>
+      <p class="note">※Windowsで閲覧ください。</p>
+      <div class="font-meiryo">
+        <h3 class="title-sub">① text-box: none（未指定の場合）</h3>
+        <ul class="label-list">
+          <li class="label4">りんご</li>
+          <li class="label4">お問い合わせ</li>
+          <li class="label4">login</li>
+          <li class="label4">Serviceについて</li>
+        </ul>
+      </div>
+
+      <div class="font-meiryo">
+        <h3 class="title-sub">② text-box: trim-both text</h3>
+        <ul class="label-list trim-both-text">
+          <li class="label trim-both-text">りんご</li>
+          <li class="label trim-both-text">お問い合わせ</li>
+          <li class="label trim-both-text">login</li>
+          <li class="label trim-both-text">Serviceについて</li>
+        </ul>
+      </div>
+
+      <div class="font-meiryo">
+        <h3 class="title-sub">③ text-box: trim-both cap alphabetic</h3>
+        <ul class="label-list">
+          <li class="label trim-both-cap-alphabetic">りんご</li>
+          <li class="label trim-both-cap-alphabetic">お問い合わせ</li>
+          <li class="label trim-both-cap-alphabetic">login</li>
+          <li class="label trim-both-cap-alphabetic">Serviceについて</li>
+        </ul>
+      </div>
+
+      <div class="font-meiryo">
+        <h3 class="title-sub">④ text-box: trim-both cap alphabetic、上下均等にpaddingを追加</h3>
+        <ul class="label-list">
+          <li class="label trim-both-cap-alphabetic add-padding">りんご</li>
+          <li class="label trim-both-cap-alphabetic add-padding">お問い合わせ</li>
+          <li class="label trim-both-cap-alphabetic add-padding">login</li>
+          <li class="label trim-both-cap-alphabetic add-padding">Serviceについて</li>
+        </ul>
+      </div>
+    </section>
+  </section>
 </body>
 
 </html>
