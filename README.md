@@ -1,6 +1,6 @@
 # 250314_text-box
 
-ICS MEDIAの記事『』のデモです。
+ICS MEDIAの記事『[CSSでテキストの上下余白が調整可能に！text-box-trimの使い方](https://ics.media/entry/250319/)』のデモです。
 
 画像とテキストの組み合わせのデモは、以下の画像を使用しています。Unsplashの[Marat Gilyadzinov](https://unsplash.com/ja/@m3design?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)が撮影した写真です。
 
